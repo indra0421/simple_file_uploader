@@ -3,6 +3,8 @@ const ejs = require("ejs");
 const hbs = require("hbs");
 const multer = require("multer");
 
+const port = 8000 || process.env.PORT;
+
 const fs = require('fs');
 
 const app = express();
@@ -48,6 +50,6 @@ app.get('/', (req, res) => {
     res.render('index');
 })
 
-app.listen(8000, () => {
+app.listen(port, () => {
     console.log('connection successful')
 });
